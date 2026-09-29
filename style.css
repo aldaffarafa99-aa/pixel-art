@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+select, input[type="color"] {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="color"] {
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+}
+
+.palette {
+  display: flex;
+  gap: 8px;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.color-swatch:hover {
+  transform: scale(1.15);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #3d3d3d;
+}
+
+button.active {
+  border-color: #3b82f6;
+  background-color: #1e3a8a;
+}
+
+button.btn-primary {
+  background-color: #2563eb;
+  border: none;
+}
+
+button.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  background-color: #333;
+  gap: 1px;
+  border: 2px solid #444;
+  user-select: none;
+  touch-action: none;
+}
+
+.grid.no-grid-lines {
+  gap: 0;
+  border: 0;
+}
+
+.pixel {
+  background-color: #ffffff;
+  cursor: pointer;
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .app-container {
+    padding: 20px 14px;
+  }
+
+  .button-group button {
+    padding: 9px 11px;
+  }
+}

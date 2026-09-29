@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Avatar Creator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <h1>Pixel Art Avatar Creator</h1>
+
+    <!-- Panel Kontrol -->
+    <div class="controls">
+      <div class="control-group">
+        <label for="gridSize">Ukuran Grid:</label>
+        <select id="gridSize">
+          <option value="8">8 x 8</option>
+          <option value="16" selected>16 x 16</option>
+          <option value="32">32 x 32</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="colorPicker">Warna:</label>
+        <input type="color" id="colorPicker" value="#3b82f6">
+      </div>
+
+      <div class="control-group">
+        <label for="templateSelect">Load Template:</label>
+        <select id="templateSelect">
+          <option value="blank">Blank</option>
+          <option value="smile">Smile Face</option>
+          <option value="heart">Heart</option>
+        </select>
+      </div>
+
+      <!-- Palet Warna Cepat -->
+      <div class="palette">
+        <div class="color-swatch" style="background-color: #000000;" data-color="#000000"></div>
+        <div class="color-swatch" style="background-color: #ffffff;" data-color="#ffffff"></div>
+        <div class="color-swatch" style="background-color: #ef4444;" data-color="#ef4444"></div>
+        <div class="color-swatch" style="background-color: #3b82f6;" data-color="#3b82f6"></div>
+        <div class="color-swatch" style="background-color: #10b981;" data-color="#10b981"></div>
+        <div class="color-swatch" style="background-color: #f59e0b;" data-color="#f59e0b"></div>
+        <div class="color-swatch" style="background-color: #8b5cf6;" data-color="#8b5cf6"></div>
+        <div class="color-swatch" style="background-color: #78350f;" data-color="#78350f"></div>
+      </div>
+
+      <div class="button-group">
+        <button id="eraserBtn">Penghapus</button>
+        <button id="bucketBtn" aria-pressed="false">Ember Cat</button>
+        <button id="symmetryBtn" aria-pressed="false">Mode Cermin: Off</button>
+        <button id="gridLinesBtn" aria-pressed="false">Sembunyikan Garis Grid</button>
+        <button id="clearBtn">Bersihkan</button>
+        <button id="downloadBtn" class="btn-primary">Download PNG</button>
+      </div>
+    </div>
+
+    <!-- Area Kanvas Pixel -->
+    <div id="grid" class="grid"></div>
+  </div>
+
+  <!-- Canvas Tersembunyi untuk Export Gambar -->
+  <canvas id="exportCanvas" style="display: none;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
